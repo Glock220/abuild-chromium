@@ -1,6 +1,7 @@
 ARG ALPINE_VERSION=edge
 FROM alpine:${ALPINE_VERSION} AS builder
 ARG COMMIT_ID=HEAD
+EXPOSE 8000
 
 RUN apk update \
   && apk add --no-cache alpine-sdk sudo \
